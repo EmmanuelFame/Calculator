@@ -32,7 +32,13 @@ document.addEventListener("DOMContentLoaded", function () {
     for (var i = 0; i < expression.length; i++) {
       var char = expression[i]
 
-      if ("+-x÷√".includes(char)) {
+      if ("+-x÷√^".includes(char)) {
+        if (currentNumber !== "") {
+          result = calculate(result, parseFloat(currentNumber), operator)
+          currentNumber = ""
+        }
+        operator = char
+      } else if (char === "!") {
         if (currentNumber !== "") {
           result = calculate(result, parseFloat(currentNumber), operator)
           currentNumber = ""
@@ -60,6 +66,10 @@ document.addEventListener("DOMContentLoaded", function () {
         return num1 * num2
       case "√":
         return Math.sqrt(num2)
+      case "!":
+        return factorialize(num2)
+      case "^":
+        return Math.pow(num1, num2)
       case "÷":
         if (num2 === 0) {
           throw new Error("Division by zero")
@@ -67,6 +77,14 @@ document.addEventListener("DOMContentLoaded", function () {
         return num1 / num2
       default:
         return 0
+    }
+  }
+
+  function factorialize(num) {
+    if (num < 0) return -1
+    else if (num === 0) return 1
+    else {
+      return num * factorialize(num - 1)
     }
   }
 })
