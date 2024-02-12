@@ -1,0 +1,16 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "\"A fun calculator with great visuals\"",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./input.css -o ./css/main.css",
+    "watch": "tailwindcss -i ./input.css -o ./css/main.css --watch"
+  },
+  "author": "\"Emmanuel Fame\"",
+  "license": "ISC",
+  "dependencies": {
+    "flowbite": "^2.2.1",
+    "tailwindcss": "^3.4.1"
+  }
+}
