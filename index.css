@@ -50,6 +50,10 @@ body {
   border: 1px solid #262525;
   background-color: #100f0f;
 }
+h4 {
+  font-size: x-small;
+  text-align: center;
+}
 .btn-op {
   display: inline-block;
   background: #000;
