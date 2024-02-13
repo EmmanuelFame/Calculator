@@ -702,6 +702,10 @@ video {
   height: 2.25rem;
 }
 
+.h-2 {
+  height: 0.5rem;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -712,6 +716,10 @@ video {
 
 .w-64 {
   width: 16rem;
+}
+
+.w-2 {
+  width: 0.5rem;
 }
 
 .flex-1 {
@@ -824,6 +832,10 @@ video {
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .rounded-e-lg {
